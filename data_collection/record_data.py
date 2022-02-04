@@ -52,7 +52,8 @@ def get_last_sequence(chunk_list, n, k, do_filtering, fs):
     return result_padded
 
 class Recorder(object):
-    def __init__(self, debug=False, display=True, num_channels=None, wifi=True):
+    def __init__(self, debug=False, display=True, num_channels=None, wifi=False):
+#    def __init__(self, debug=False, display=True, num_channels=None, wifi=True):
         # make audio stream
 
         self.audio_stream = sd.InputStream(device=None, channels=1, samplerate=16000)
@@ -64,9 +65,12 @@ class Recorder(object):
             board_id = -1 # synthetic
             sample_rate = 256
         elif not wifi:
-            board_id = BoardIds.CYTON_BOARD.value
-            params.serial_port = '/dev/ttyUSB0'
-            sample_rate = 250
+            board_id = BoardIds.FREEEEG32_BOARD.value
+#            board_id = BoardIds.CYTON_BOARD.value
+            params.serial_port = '/dev/ttyACM0'
+#            params.serial_port = '/dev/ttyUSB0'
+            sample_rate = 512
+#            sample_rate = 250
         else:
             board_id = BoardIds.CYTON_WIFI_BOARD.value
             params.ip_port = 8001
@@ -78,7 +82,7 @@ class Recorder(object):
 
         board = BoardShim(board_id, params)
         board.prepare_session()
-        board.config_board('/3') # configure for digital read
+#        board.config_board('/3') # configure for digital read
         board.start_stream()
         self.board = board
 
@@ -184,6 +188,7 @@ class Recorder(object):
         plt.close()
 
 if __name__ == '__main__':
-    with Recorder(debug=False, wifi=True, num_channels=1) as r:
+    with Recorder(debug=False, wifi=False, num_channels=1) as r:
+#    with Recorder(debug=False, wifi=True, num_channels=1) as r:
         while True:
             r.update()
