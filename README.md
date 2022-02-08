@@ -6,7 +6,7 @@ On an ASR-based open vocabulary evaluation, the latest model achieves a WER of a
 
 ## Data
 
---pretrained_wavenet_model wavenet_model_50,pt https://drive.google.com/file/d/1_x5Ath-6CRtjoiGXrkTqz1jhhYrAISX_/view?usp=sharing
+--pretrained_wavenet_model wavenet_model_50.pt https://drive.google.com/file/d/1_x5Ath-6CRtjoiGXrkTqz1jhhYrAISX_/view?usp=sharing
 
 The EMG and audio data can be downloaded from <https://doi.org/10.5281/zenodo.4064408>.  The scripts expect the data to be located in a `emg_data` subdirectory by default, but the location can be overridden with flags (see the top of `read_emg.py`).
 
