@@ -4,11 +4,13 @@ This is the repository for the papers "Digital Voicing of Silent Speech" at EMNL
 The current commit contains only the model for the more recent paper, but the 2020 model can be found in the commit history.
 On an ASR-based open vocabulary evaluation, the latest model achieves a WER of approximately 42%.
 
-## Data
+## trained networks
 
 --pretrained_wavenet_model ./models/wavenet_model/wavenet_model_50.pt https://drive.google.com/file/d/1_x5Ath-6CRtjoiGXrkTqz1jhhYrAISX_/view?usp=sharing
 
 --models ./models/transduction_model/model_07.pt https://drive.google.com/file/d/1cHkkUC8xbwbCnV76ewwxU2t_GPr5r-jj/view?usp=sharing
+
+## Data
 
 The EMG and audio data can be downloaded from <https://doi.org/10.5281/zenodo.4064408>.  The scripts expect the data to be located in a `emg_data` subdirectory by default, but the location can be overridden with flags (see the top of `read_emg.py`).
 
