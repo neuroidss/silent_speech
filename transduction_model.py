@@ -17,6 +17,8 @@ from data_utils import phoneme_inventory, decollate_tensor
 
 from absl import flags
 FLAGS = flags.FLAGS
+flags.DEFINE_integer('num_workers', 8, 'num_workers in DataLoader')
+flags.DEFINE_integer('batch_sampler', 256000, 'batch_sampler in DataLoader')
 flags.DEFINE_integer('model_size', 768, 'number of hidden dimensions')
 flags.DEFINE_integer('num_layers', 6, 'number of layers')
 flags.DEFINE_integer('batch_size', 32, 'training batch size')
@@ -208,7 +210,7 @@ def train_model(trainset, devset, device, save_sound_outputs=True, n_epochs=80):
         training_subset = trainset
     else:
         training_subset = torch.utils.data.Subset(trainset, list(range(int(len(trainset)*FLAGS.data_size_fraction))))
-    dataloader = torch.utils.data.DataLoader(training_subset, pin_memory=(device=='cuda'), collate_fn=devset.collate_fixed_length, num_workers=8, batch_sampler=SizeAwareSampler(trainset, 256000))
+    dataloader = torch.utils.data.DataLoader(training_subset, pin_memory=(device=='cuda'), collate_fn=devset.collate_fixed_length, num_workers=FLAGS.num_workers, batch_sampler=SizeAwareSampler(trainset, FLAGS.batch_sampler))
 
     n_phones = len(phoneme_inventory)
     model = Model(devset.num_features, devset.num_speech_features, n_phones, devset.num_sessions).to(device)
