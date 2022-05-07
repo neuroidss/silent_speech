@@ -6,11 +6,12 @@ On an ASR-based open vocabulary evaluation, the latest model achieves a WER of a
 
 ## trained networks
 
---pretrained_wavenet_model ./models/wavenet_model/wavenet_model_voiced_50_of_50.pt https://drive.google.com/file/d/1_x5Ath-6CRtjoiGXrkTqz1jhhYrAISX_/view?usp=sharing
+--pretrained_wavenet_model ./models/wavenet_model/wavenet_model_50_of_50.pt https://drive.google.com/file/d/1_x5Ath-6CRtjoiGXrkTqz1jhhYrAISX_/view?usp=sharing
 
---models ./models/transduction_model/model_768_voiced_07_of_80.pt https://drive.google.com/file/d/1cHkkUC8xbwbCnV76ewwxU2t_GPr5r-jj/view?usp=sharing
+--models ./models/transduction_model/model_768_07_of_80.pt https://drive.google.com/file/d/1cHkkUC8xbwbCnV76ewwxU2t_GPr5r-jj/view?usp=sharing
 
---models ./models/transduction_model/model_384_voiced_56_of_80.pt https://drive.google.com/file/d/15KcI7GR8ndwKkJCGgULDTHoE4OTHpLaT/view?usp=sharing
+--models ./models/transduction_model/model_384_56_of_80.pt https://drive.google.com/file/d/15KcI7GR8ndwKkJCGgULDTHoE4OTHpLaT/view?usp=sharing
+--models ./models/transduction_model/model_384_67_of_80.pt https://drive.google.com/file/d/16Gh_VA0ydpfqDu57Xy6D7W8LxWniSQE_/view?usp=sharing
 
 ## Data
 
