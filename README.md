@@ -11,6 +11,7 @@ On an ASR-based open vocabulary evaluation, the latest model achieves a WER of a
 --models ./models/transduction_model/model_768_07_of_80.pt https://drive.google.com/file/d/1cHkkUC8xbwbCnV76ewwxU2t_GPr5r-jj/view?usp=sharing
 
 --models ./models/transduction_model/model_384_56_of_80.pt https://drive.google.com/file/d/15KcI7GR8ndwKkJCGgULDTHoE4OTHpLaT/view?usp=sharing
+
 --models ./models/transduction_model/model_384_67_of_80.pt https://drive.google.com/file/d/16Gh_VA0ydpfqDu57Xy6D7W8LxWniSQE_/view?usp=sharing
 
 ## Data
