@@ -14,6 +14,8 @@ On an ASR-based open vocabulary evaluation, the latest model achieves a WER of a
 
 --models ./models/transduction_model/model_384_67_of_80.pt https://drive.google.com/file/d/16Gh_VA0ydpfqDu57Xy6D7W8LxWniSQE_/view?usp=sharing
 
+--models ./models/transduction_model/model_384_71_of_80.pt https://drive.google.com/file/d/16PyBJwatVxB_DVfIDW8pix0QkBO_t06f/view?usp=sharing
+
 ## Data
 
 The EMG and audio data can be downloaded from <https://doi.org/10.5281/zenodo.4064408>.  The scripts expect the data to be located in a `emg_data` subdirectory by default, but the location can be overridden with flags (see the top of `read_emg.py`).
