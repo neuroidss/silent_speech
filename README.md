@@ -10,11 +10,11 @@ On an ASR-based open vocabulary evaluation, the latest model achieves a WER of a
 
 --models ./models/transduction_model/model_768_07_of_80.pt https://drive.google.com/file/d/1cHkkUC8xbwbCnV76ewwxU2t_GPr5r-jj/view?usp=sharing
 
---models ./models/transduction_model/model_384_56_of_80.pt https://drive.google.com/file/d/15KcI7GR8ndwKkJCGgULDTHoE4OTHpLaT/view?usp=sharing
+--models ./models/transduction_model/model_384_73_of_80.pt https://drive.google.com/file/d/16aTmQDKlkkIYMEc3Eve0UxFCrJdzEIuJ/view?usp=sharing
+epoch 73 - validation loss: 0.7192 training loss: 0.4744 phoneme accuracy: 79.60
 
---models ./models/transduction_model/model_384_67_of_80.pt https://drive.google.com/file/d/16Gh_VA0ydpfqDu57Xy6D7W8LxWniSQE_/view?usp=sharing
-
---models ./models/transduction_model/model_384_71_of_80.pt https://drive.google.com/file/d/16PyBJwatVxB_DVfIDW8pix0QkBO_t06f/view?usp=sharing
+--models ./models/transduction_model/model_384_76_of_80.pt https://drive.google.com/file/d/16fmwWWdy4VU6bTLs7whmIttjohFZVAoJ/view?usp=sharing
+epoch 76 - validation loss: 0.7243 training loss: 0.4647 phoneme accuracy: 79.44
 
 ## Data
 
